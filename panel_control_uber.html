@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Conductor</title>
+    <link rel="stylesheet" href="conductor.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Solicitudes de Viaje</h1>
+    </header>
+
+    <main class="main-content">
+        <section class="trip-order">
+            <h2>Detalle del Viaje</h2>
+            <div id="trip-details">
+                <p><strong>Teléfono del pasajero:</strong> <span id="passenger-phone">Cargando...</span></p>
+                <p><strong>Ubicación actual del pasajero:</strong> <span id="trip-location">Cargando...</span></p>
+                <p><strong>Destino:</strong> <span id="trip-destination">Cargando...</span></p>
+                <p><strong>Distancia al pasajero:</strong> <span id="distance-to-passenger">Cargando...</span></p>
+                <p><strong>Precio del viaje:</strong> <span id="trip-cost">Cargando...</span></p>
+            </div>
+
+            <div id="map-container">
+                <h3>Ubicación del Pasajero</h3>
+                <div id="map"></div>
+            </div>
+
+            <button id="accept-trip-btn" class="accept-trip-btn">Aceptar Viaje</button>
+        </section>
+    </main>
+
+    <script src="conductor.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3xKp9oCPeRfduSHv29G_nph7u4rLHQVI&libraries=places,marker" async defer></script> 
+</body>
+</html>

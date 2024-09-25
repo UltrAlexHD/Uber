@@ -1,0 +1,185 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1d1e22, #2c3e50);
+  color: #fff;
+  margin: 0;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal del formulario */
+.container {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos */
+h1, h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffcc00;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Inputs generales */
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffcc00;
+}
+
+/* Contenedor del input de contraseña con ícono */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ffcc00;
+}
+
+/* Botones */
+.button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.button:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de registro */
+.register-btn {
+  background-color: #28a745;
+}
+
+.register-btn:hover {
+  background-color: #218838;
+}
+
+/* Botón de continuar sin iniciar sesión */
+.no-register-btn {
+  background-color: #007bff;
+}
+
+.no-register-btn:hover {
+  background-color: #0069d9;
+}
+
+/* Link para recuperar contraseña */
+.forgot-password {
+  color: #ffcc00;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Formulario emergente */
+.popup-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  display: none;
+  z-index: 1000;
+}
+
+.popup-form.visible {
+  display: block;
+}
+
+.popup-form h2 {
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+/* Estilos para el link de "Olvidaste tu contraseña" */
+.forgot-password {
+  color: #ffcc00;
+  cursor: pointer;
+}
+
+/* Botones en el formulario emergente */
+.popup-form button {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 15px;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup-form button:hover {
+  background-color: #e6b800;
+}
+
+/* Estilo para pantallas móviles */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  input {
+    padding: 12px;
+  }
+
+  .button {
+    padding: 12px;
+  }
+}

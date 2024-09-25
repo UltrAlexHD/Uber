@@ -1,0 +1,147 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1d1e22, #2c3e50);
+    color: #fff;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: #333;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    color: #555;
+}
+
+/* Estilos para los inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #ffcc00;  /* Bordes visibles */
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo más claro */
+    color: #333;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="file"]::placeholder {
+    color: rgba(51, 51, 51, 0.6);  /* Placeholder más oscuro */
+}
+
+/* Estilos de hover y foco en los inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="file"]:focus {
+    border-color: #e6b800;  /* Color del borde al enfocar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+/* Estilos especiales para el input de tipo file */
+input[type="file"] {
+    border: none;
+}
+
+input[type="file"]::file-selector-button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Estilos para el botón de enviar */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Barra de progreso */
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 30px;
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    background-color: #ffcc00;
+    height: 100%;
+    width: 0;
+    border-radius: 30px;
+    transition: width 0.4s ease;
+}
+
+/* Estilo para el checkbox de términos y condiciones */
+.terms {
+    margin-top: 20px;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.terms a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viaja con RideIt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="ruta-del-logo" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Viaja</a></li>
+        <li><a href="#">Conduce</a></li>
+        <li><a href="#">Empresas</a></li>
+        <li><a href="#">RideIt Eats</a></li>
+        <li><a href="#">Quiénes somos</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="#" id="login-btn" class="login-btn">Inicia sesión</a>
+      <a href="#" id="register-btn" class="btn-register">Regístrate</a>
+      <div id="user-dropdown" class="user-dropdown" style="display: none;">
+        <button id="user-name-btn" class="user-name-btn">
+          Usuario <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="dropdown-content" class="dropdown-content">
+          <a href="#">Perfil</a>
+          <a href="#" id="logout-btn">Cerrar sesión</a>
+        </div>
+      </div>
+    </div>
+    <div class="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Llega a donde quieras con RideIt</h1>
+        <form class="travel-form" id="travel-form">
+          <input type="text" id="location" placeholder="Ingresa una ubicación" aria-label="Campo de ubicación">
+          <input type="text" id="destination" placeholder="Ingresa un destino" aria-label="Campo de destino">
+          <button type="button" id="use-location" aria-label="Usar mi ubicación">Usar mi ubicación</button>
+          <div id="cost-result"></div>
+          <button type="button" id="accept-ride" aria-label="Aceptar viaje" onclick="checkSessionAndRedirect()" style="margin-top: 10px;">Aceptar viaje</button>
+        </form>
+      </div>
+      <div class="hero-image">
+        <div id="map" style="height: 500px; width: 100%;"></div>
+        <div id="map-loading" style="display:none;">Cargando mapa...</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-modal">&times;</span>
+      <h2></h2>
+    </div>
+  </div>
+
+  <div class="suggestions-section">
+    <h2 class="suggestions-title">Sugerencias</h2>
+    <div class="suggestions-container">
+      <div class="suggestion">
+        <img src="car-icon.png" alt="Viaje Icono">
+        <h3>Viaje</h3>
+        <p>Viaje a cualquier lugar con la app de RideIt. Pida un viaje, súbase y relájese.</p>
+        <button>Detalles</button>
+      </div>
+      <div class="suggestion">
+        <img src="reserve-icon.png" alt="Reservar Icono">
+        <h3>Reserva</h3>
+        <p>Reserve su viaje con anticipación para que pueda relajarse ese día.</p>
+        <button>Detalles</button>
+      </div>
+      <div class="suggestion">
+        <img src="delivery-icon.png" alt="Envíos Icono">
+        <h3>Envíos</h3>
+        <p>Con RideIt Flash, las entregas en el mismo día son más fáciles que nunca.</p>
+        <button>Detalles</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3xKp9oCPeRfduSHv29G_nph7u4rLHQVI&libraries=places,marker" async defer></script> 
+  <script src="scripts.js"></script>
+</body>
+</html>

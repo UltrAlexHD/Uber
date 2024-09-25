@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado del Viaje</title>
+    <link rel="stylesheet" href="viaje.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Estado del Viaje</h1>
+        <div class="cancel-btn" onclick="cancelTrip()">Cancelar viaje</div>
+    </header>
+
+    <main class="main-content">
+        <section class="trip-status">
+            <h2 id="status-message">Buscando un conductor...</h2>
+            <p>Ubicación actual: <span id="trip-location"></span></p>
+            <p>Destino: <span id="trip-destination"></span></p>
+            <p id="trip-cost"></p> <!-- Costo del viaje -->
+            <p id="trip-duration"></p> <!-- Tiempo estimado de llegada -->
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </section>
+
+        <section class="map-container" id="map-container">
+            <div id="map" onclick="toggleMapSize()"></div>
+        </section>
+    </main>
+
+    <section class="driver-info hidden" id="driver-info">
+        <h2>Información del Conductor</h2>
+        <p>Nombre del conductor: <span id="driver-name">Cargando...</span></p>
+        <p>Ubicación del conductor: <span id="driver-location">Cargando...</span></p>
+        <p>Tiempo estimado de llegada: <span id="eta">Cargando...</span></p>
+    </section>
+
+    <script src="viaje.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3xKp9oCPeRfduSHv29G_nph7u4rLHQVI&libraries=places,marker" async defer></script> 
+    <script src="scripts.js"></script>
+</body>
+</html>

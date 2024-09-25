@@ -1,0 +1,539 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1d1e22, #2c3e50);
+  color: #fff;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Header mejorado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.logo img {
+  width: 120px;
+}
+
+nav {
+  flex-grow: 1;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-bottom: 2px solid transparent;
+  transition: background-color 0.3s, transform 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border-bottom: 2px solid #ffcc00;
+  transform: scale(1.1);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-right a, .header-right span {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.btn-register {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-register:hover {
+  background-color: #e6b800;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icono de menú en móviles */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1100;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #fff;
+  z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-menu ul li {
+  margin: 20px 0;
+}
+
+.mobile-menu ul li a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 60px;
+  gap: 20px;
+  background-image: url('hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.hero-text {
+  max-width: 500px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  color: #ffcc00;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.travel-form input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Botón general en el formulario */
+.travel-form button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #ffcc00;
+  color: #000;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.travel-form button:hover {
+  background-color: #e6b800;
+  transform: scale(1.1);
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Estilo mejorado para la información de costo, distancia y tiempo */
+.info-text {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ffcc00;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para el botón de aceptar el viaje */
+.btn-accept-ride {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  border: none;
+  background-color: #00cc66;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-accept-ride:hover {
+  background-color: #00b359;
+  transform: scale(1.05);
+}
+
+/* Sección de sugerencias */
+.suggestions-section {
+  background-color: #f0f0f0;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.suggestions-title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.suggestions-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.suggestion {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.suggestion:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.suggestion h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.suggestion p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.suggestion button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.suggestion button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Sección de negocio */
+.business-section, .reinvented-business-section {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 60px 20px;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.business-section .business-text, 
+.reinvented-business-section .reinvented-business-text {
+  max-width: 500px;
+}
+
+.business-section .business-image img, 
+.reinvented-business-section .reinvented-business-image img {
+  width: 65%;
+  border-radius: 10px;
+}
+
+.business-section {
+  flex-direction: row;
+}
+
+.reinvented-business-section {
+  flex-direction: row;
+}
+
+/* Botones en la sección de negocio */
+.business-buttons button, 
+.reinvented-business-text button {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.business-buttons button:hover, 
+.reinvented-business-text button:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+/* Links en la sección de negocio */
+.business-buttons a, 
+.reinvented-business-text a {
+  color: #000;
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 42px;
+}
+
+/* Botón del usuario */
+.user-name-btn {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-name-btn i {
+  transition: transform 0.3s ease;
+}
+
+.user-name-btn:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-name-btn:hover i {
+  transform: rotate(180deg);
+}
+
+/* Menú desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 200px;
+  padding: 10px 0;
+  animation: fadeInDropdown 0.3s ease forwards;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 204, 0, 0.2);
+}
+
+.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Animación del menú desplegable */
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animaciones generales y transiciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .suggestions-container {
+    justify-content: center;
+  }
+
+  .business-section, .reinvented-business-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .business-section .business-image img, 
+  .reinvented-business-section .reinvented-business-image img {
+    margin-top: 20px;
+  }
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #000;
+  padding: 30px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo del resultado de costo */
+#cost-result {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 15px;
+  color: #ffcc00;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#cost-result p {
+  margin: 0;
+  font-size: 16px;
+}
+
+#cost-result i {
+  margin-right: 8px;
+  color: #ffcc00;
+}
+
+#cost-result .cost-item {
+  display: flex;
+  align-items: center;
+}
+
+#cost-result:hover {
+  transform: scale(1.05);
+}
+
+/* Animación para el texto */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#cost-result {
+  animation: fadeIn 0.5s ease-in-out;
+}

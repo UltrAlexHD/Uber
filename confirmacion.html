@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="stylesgo.css">
+</head>
+<body>
+    <div class="container animate-form">
+        <h1>Inicia sesión con tu correo</h1>
+
+        <!-- Formulario de inicio de sesión -->
+        <input type="email" id="email-login" placeholder="Correo electrónico o teléfono" required>
+        <div class="password-wrapper">
+            <input type="password" id="password-login" placeholder="Contraseña" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+        </div>
+        <button class="button continue-btn" onclick="login()">Iniciar Sesión</button>
+
+        <p><a href="#" class="forgot-password" onclick="openForgotPassword()">¿Olvidaste tu contraseña?</a></p>
+        <hr>
+
+        <!-- Botón para redirigir a la página de registro -->
+        <button class="button register-btn" onclick="redirectToRegister()">Registrarse</button>
+
+        <hr>
+
+        <!-- Botón para continuar sin iniciar sesión -->
+        <button class="button no-register-btn" onclick="continueWithoutLogin()">Continuar sin iniciar sesión</button>
+    </div>
+
+    <!-- Formulario emergente para continuar sin iniciar sesión -->
+    <div id="popup-form" class="popup-form hidden">
+        <h2>Continuar sin iniciar sesión</h2>
+        <label for="name">Nombre (opcional):</label>
+        <input type="text" id="name" placeholder="Ingresa tu nombre">
+        <label for="phone">Teléfono (obligatorio):</label>
+        <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono" required>
+        <button class="button" onclick="submitForm()">Enviar y continuar</button>
+        <button class="button" onclick="closePopup()">Cancelar</button>
+    </div>
+
+    <!-- Formulario emergente para recuperar contraseña -->
+    <div id="forgot-password-modal" class="popup-form hidden">
+        <h2>Recuperar contraseña</h2>
+        <label for="email-recover">Correo electrónico:</label>
+        <input type="email" id="email-recover" placeholder="Ingresa tu correo" required>
+        <button class="button" onclick="recoverPassword()">Enviar</button>
+        <button class="button" onclick="closeForgotPassword()">Cancelar</button>
+    </div>
+
+    <script src="scriptsgo.js"></script>
+</body>
+</html>

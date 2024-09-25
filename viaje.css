@@ -1,0 +1,141 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1d1e22, #2c3e50);
+  color: #fff;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Header */
+header.header {
+  background-color: #1d72b8;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.cancel-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: #ff4b5c;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #ff2b3c;
+}
+
+/* Main container layout */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Estado del viaje */
+.trip-status {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 60%;
+  text-align: center;
+  color: #333;
+}
+
+.trip-status h2 {
+  font-size: 24px;
+  color: #1d72b8;
+  margin-bottom: 10px;
+}
+
+/* Barra de progreso */
+#progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin: 20px 0;
+  position: relative;
+}
+
+#progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #ffcc00;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* Mapa */
+.map-container {
+  width: 35%;
+  height: 300px;
+  position: relative;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mapa a pantalla completa */
+.map-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  transition: all 0.5s ease;
+}
+
+/* Información del conductor */
+.driver-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #333;
+  display: none;
+}
+
+.driver-info h2 {
+  font-size: 20px;
+  color: #1d72b8;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .map-container {
+      width: 100%;
+      height: 250px;
+  }
+
+  .trip-status {
+      width: 100%;
+  }
+}
